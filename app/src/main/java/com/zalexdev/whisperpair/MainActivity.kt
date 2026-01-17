@@ -539,8 +539,8 @@ fun ScannerScreen(
                 Icon(Icons.Default.Security, contentDescription = null, tint = CyanPrimary, modifier = Modifier.size(28.dp))
                 Spacer(Modifier.width(12.dp))
                 Column {
-                    Text("WhisperPair", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = TextPrimary)
-                    Text("Developed by ZalexDev", fontSize = 11.sp, color = CyanPrimary)
+                    Text("Headphone Test", fontWeight = FontWeight.Bold, fontSize = 20.sp, color = TextPrimary)
+                    Text("Compiled by Leeroy", fontSize = 11.sp, color = CyanPrimary)
                 }
             }
             IconButton(onClick = onShowAbout) {
