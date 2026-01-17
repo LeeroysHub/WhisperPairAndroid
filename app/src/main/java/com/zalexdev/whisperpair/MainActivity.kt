@@ -370,7 +370,7 @@ fun WhisperPairApp(
     val prefs = remember { context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE) }
     var currentScreen by remember { mutableStateOf(Screen.Scanner) }
     var showAboutDialog by remember { mutableStateOf(false) }
-    var showDisclaimerDialog by remember { mutableStateOf(!prefs.getBoolean(KEY_DISCLAIMER_ACCEPTED, false)) }
+    //var showDisclaimerDialog by remember { mutableStateOf(!prefs.getBoolean(KEY_DISCLAIMER_ACCEPTED, false)) }
 
     Scaffold(
         bottomBar = {
@@ -432,12 +432,12 @@ fun WhisperPairApp(
         AboutDialog(onDismiss = { showAboutDialog = false })
     }
 
-    if (showDisclaimerDialog) {
+    /* if (showDisclaimerDialog) {
         DisclaimerDialog(onAccept = {
             prefs.edit().putBoolean(KEY_DISCLAIMER_ACCEPTED, true).apply()
             showDisclaimerDialog = false
         })
-    }
+    } */
 
     if (showUnpairWarning) {
         UnpairWarningDialog(onDismiss = onDismissUnpairWarning)
